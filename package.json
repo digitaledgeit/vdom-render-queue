@@ -1,0 +1,29 @@
+{
+  "name": "vdom-render-queue",
+  "version": "1.0.0",
+  "description": "Queue repeated virtual-dom `diff`ing and `patch`ing until the next repaint.",
+  "keywords": [
+    "vdom",
+    "virtual-dom",
+    "render",
+    "queue",
+    "requestAnimationFrame",
+    "vnode"
+  ],
+  "author": "James Newell <james@digitaledgeit.com.au>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:digitaledgeit/vdom-render-queue.git"
+  },
+  "dependencies": {
+    "vdom-render-to": "^0.10.0"
+  },
+  "scripts": {
+    "example.build": "browserify --debug example/index.js -o example/build.js",
+    "example.watch": "watchify --debug example/index.js -o example/build.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "virtual-dom": "^2.1.1"
+  }
+}
