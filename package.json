@@ -1,7 +1,7 @@
 {
   "name": "vdom-render-queue",
   "version": "1.0.0",
-  "description": "Queue repeated virtual-dom `diff`ing and `patch`ing until the next repaint.",
+  "description": "Queue repeated virtual-dom `diff`ing and `patch`ing operations until the next repaint.",
   "keywords": [
     "vdom",
     "virtual-dom",
