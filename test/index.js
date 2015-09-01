@@ -14,8 +14,10 @@ describe('vdom-render-queue', function() {
     });
 
     afterEach(function() {
-      document.body.removeChild(el);
-      el = null;
+      if (el.parentNode) {
+        el.parentNode.removeChild(el);
+        el = null;
+      }
     });
 
     it('should call the fn() 4x', function(done) {
@@ -33,6 +35,7 @@ describe('vdom-render-queue', function() {
 
       setTimeout(function() {
         assert.equal(callCount, 4);
+        done();
       }, 500);
 
     });
@@ -52,6 +55,7 @@ describe('vdom-render-queue', function() {
 
       setTimeout(function() {
         assert.equal(callCount, 1);
+        done();
       }, 500);
 
     });
